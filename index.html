@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Professional Resume Builder</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>Professional Resume Builder</h1>
+    </header>
+
+    <div class="form-container">
+      <form id="resumeForm">
+        <!-- Personal Info -->
+        <div class="section">
+          <h2>Personal Information</h2>
+          <div class="form-group">
+            <label for="fullName">Full Name <span class="required">*</span></label>
+            <input type="text" id="fullName" placeholder="Full Name" required />
+          </div>
+          <div class="form-group">
+            <label for="jobTitle">Professional Title <span class="required">*</span></label>
+            <input type="text" id="jobTitle" placeholder="Professional Title" required />
+          </div>
+          <div class="form-group">
+            <label for="dob">Date of Birth <span class="required">*</span></label>
+            <input type="date" id="dob" required />
+          </div>
+
+          <div class="form-group">
+            <h2>Gender <span class="required">*</span></h2>
+            <div style="display: flex; gap: 20px; align-items: center;">
+              <label><input type="radio" name="gender" value="Male" required> Male</label>
+              <label><input type="radio" name="gender" value="Female"> Female</label>
+              <label><input type="radio" name="gender" value="Other"> Other</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="section">
+          <h2>Contact Information</h2>
+          <div class="form-group">
+            <label for="phone">Phone <span class="required">*</span></label>
+            <input type="tel" id="phone" placeholder="9800000000" required maxlength="10" />
+          </div>
+          <div class="form-group">
+            <label for="email">Email <span class="required">*</span></label>
+            <input type="email" id="email" placeholder="hello@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="address">Address <span class="required">*</span></label>
+            <input type="text" id="address" placeholder="123 Anywhere St." required />
+          </div>
+          <div class="form-group">
+            <label for="website">Website</label>
+            <input type="url" id="website" placeholder="https://www.portfolio.com" />
+          </div>
+        </div>
+
+        <!-- Summary -->
+        <div class="section">
+          <h2>Profile Summary</h2>
+          <div class="form-group">
+            <textarea id="summary" placeholder="Experienced marketing professional..."></textarea>
+          </div>
+        </div>
+
+        <!-- Education -->
+        <div class="section">
+          <h2>Education</h2>
+          <div id="educationContainer">
+            <div class="item-group">
+              <div class="form-group">
+                <label>Degree</label>
+                <input type="text" name="degree" placeholder="Name of Degree" />
+              </div>
+              <div class="form-group">
+                <label>Institution</label>
+                <input type="text" name="institution" placeholder="Name of Institution" />
+              </div>
+              <div class="form-group">
+                <label>Dates</label>
+                <input type="text" name="educationDate" placeholder="2020 - 2022" />
+              </div>
+              <div class="form-group">
+                <label>Details</label>
+                <input type="text" name="educationDetails" placeholder="GPA: out of/4.0" />
+              </div>
+            </div>
+          </div>
+          <button type="button" class="add-btn" id="addEducation">+ Add Education</button>
+        </div>
+
+        <!-- Skills -->
+        <div class="section">
+          <h2>Skills</h2>
+          <div class="form-group">
+            <textarea id="skills" placeholder="Leadership, SEO, Communication, Design Tools"></textarea>
+            <small>Separate skills with commas</small>
+          </div>
+        </div>
+
+        <!-- Languages -->
+        <div class="section">
+          <h2>Languages Known <span class="required">*</span></h2>
+          <div class="form-group">
+            <label for="languages">Select Languages <span class="required">*</span></label>
+            <select id="languages" name="languages" multiple required>
+              <option value="Hindi">Hindi</option>
+              <option value="English">English</option>
+              <option value="Spanish">Spanish</option>
+              <option value="French">French</option>
+              <option value="German">German</option>
+              <option value="Nepali">Nepali</option>
+            </select>
+            <small>Hold Ctrl (Windows) or Command (Mac) to select multiple</small>
+          </div>
+        </div>
+
+        <!-- Experience -->
+        <div class="section">
+          <h2>Work Experience</h2>
+          <div id="experienceContainer">
+            <div class="item-group">
+              <div class="form-group">
+                <label>Company</label>
+                <input type="text" name="company" placeholder="Company Name" />
+              </div>
+              <div class="form-group">
+                <label>Position</label>
+                <input type="text" name="position" placeholder="Job Title" />
+              </div>
+              <div class="form-group">
+                <label>Dates</label>
+                <input type="text" name="jobDate" placeholder="2021 - Present" />
+              </div>
+              <div class="form-group">
+                <label>Description</label>
+                <textarea name="jobDescription" placeholder="Key responsibilities and achievements"></textarea>
+              </div>
+            </div>
+          </div>
+          <button type="button" class="add-btn" id="addExperience">+ Add Experience</button>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit" class="btn btn-block">Create Resume</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script1.js"></script>
+</body>
+
+</html>
